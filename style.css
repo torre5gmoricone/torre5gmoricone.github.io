@@ -685,6 +685,40 @@ footer p {
   margin: 0;
 }
 
+/* ── Nav Cards (homepage) ── */
+.nav-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 2rem 0;
+}
+.nav-card {
+  display: block;
+  background: var(--paper-mid);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.25rem;
+  text-decoration: none;
+  transition: background .15s, border-color .15s;
+}
+.nav-card:hover {
+  background: var(--paper);
+  border-color: var(--blue);
+}
+.nav-card-title {
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: .4rem;
+}
+.nav-card-desc {
+  font-size: .9rem;
+  color: var(--ink-mid);
+  line-height: 1.5;
+}
+@media (max-width: 600px) {
+  .nav-cards { grid-template-columns: 1fr; }
+}
+
 /* ── Responsive ── */
 @media (max-width: 640px) {
   html { font-size: 16px; }
