@@ -33,6 +33,12 @@ document.querySelectorAll('.pill-toggle').forEach(function(btn) {
     var body = pill.querySelector('.pill-body');
     var isOpen = !body.hidden;
 
+    // Cattura la pillola aperta prima di chiudere tutto (caso 3)
+    var previouslyOpenPill = null;
+    document.querySelectorAll('.pill-body').forEach(function(b) {
+      if (!b.hidden) previouslyOpenPill = b.closest('.pill');
+    });
+
     // Chiudi tutti
     document.querySelectorAll('.pill-body').forEach(function(b) {
       b.hidden = true;
@@ -48,6 +54,10 @@ document.querySelectorAll('.pill-toggle').forEach(function(btn) {
 
     // Se era chiuso, aprilo
     if (!isOpen) {
+      // Scroll all'inizio della pillola che si sta chiudendo (caso 3)
+      if (previouslyOpenPill && previouslyOpenPill !== pill) {
+        previouslyOpenPill.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
       body.hidden = false;
       var openBtn = pill.querySelector('.pill-toggle:not(.pill-toggle--close)');
       if (openBtn) {
@@ -56,6 +66,11 @@ document.querySelectorAll('.pill-toggle').forEach(function(btn) {
       }
       setTimeout(function() {
         body.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, 50);
+    } else {
+      // Chiusura diretta (caso 1: --close o toggle della stessa pillola)
+      setTimeout(function() {
+        pill.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }, 50);
     }
   });
@@ -72,5 +87,9 @@ document.querySelectorAll('.pill-body').forEach(function(body) {
       openBtn.setAttribute('aria-expanded', 'false');
       openBtn.textContent = 'Approfondimento ↓';
     }
+    // Scroll all'inizio della pillola chiusa (caso 2)
+    setTimeout(function() {
+      pill.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 50);
   });
 });
