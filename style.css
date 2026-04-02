@@ -544,6 +544,121 @@ article.post:first-child {
   margin-top: 8px;
 }
 
+/* ── Contratto table ── */
+.contratto-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+  min-width: 600px;
+}
+
+.contratto-table thead th {
+  padding: 10px 14px;
+  text-align: left;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.contratto-table .col-materia {
+  width: 25%;
+  background: var(--paper-mid);
+  border-bottom: 1px solid var(--border);
+  padding: 10px 14px;
+  vertical-align: top;
+  color: var(--ink-mid);
+  font-size: 0.85rem;
+}
+
+.contratto-table thead .col-materia {
+  background: var(--ink);
+  color: white;
+}
+
+.contratto-table .col-inwit {
+  width: 37.5%;
+  background: #eef3f9;
+  border-bottom: 1px solid var(--border);
+  padding: 10px 14px;
+  vertical-align: top;
+}
+
+.contratto-table thead .col-inwit {
+  background: #1a3a5c;
+  color: white;
+}
+
+.contratto-table .col-comune {
+  width: 37.5%;
+  background: var(--paper);
+  border-bottom: 1px solid var(--border);
+  padding: 10px 14px;
+  vertical-align: top;
+}
+
+.contratto-table thead .col-comune {
+  background: #4a5568;
+  color: white;
+}
+
+.contratto-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.contratto-table tbody tr:hover td {
+  filter: brightness(0.97);
+}
+
+.contratto-art {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--ink-light);
+  display: block;
+  margin-top: 2px;
+}
+
+.contratto-nota {
+  font-size: 0.85rem;
+  color: var(--ink-mid);
+  background: var(--paper-mid);
+  border-left: 3px solid var(--border);
+  padding: 10px 14px;
+  margin: 0.5rem 0 2rem;
+}
+
+.doc-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 2rem;
+}
+
+.doc-list-item {
+  border: 1px solid var(--border);
+  padding: 14px 18px;
+  margin-bottom: 10px;
+  background: var(--paper-mid);
+}
+
+.doc-list-link {
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--blue);
+  text-decoration: none;
+}
+
+.doc-list-link:hover {
+  text-decoration: underline;
+}
+
+.doc-list-desc {
+  margin: 4px 0 0;
+  font-size: 0.85rem;
+  color: var(--ink-mid);
+}
+
 /* ── Le Richieste ── */
 .richieste-meta {
   display: flex;
