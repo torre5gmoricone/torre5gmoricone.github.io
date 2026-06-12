@@ -2,8 +2,7 @@
   var links = [
     { href: 'index.html',        label: 'Home' },
     { href: 'comeprocede.html',  label: 'Come procede' },
-    { href: 'delibera.html',     label: 'La delibera' },
-    { href: 'contratto.html',    label: 'Il contratto' },
+    { href: 'richieste.html',    label: 'Richieste' },
     { href: 'faq.html',          label: 'FAQ' }
   ];
 
