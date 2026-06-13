@@ -1,6 +1,7 @@
 (function() {
   var links = [
     { href: 'index.html',        label: 'Home' },
+    { href: 'laquestione.html',  label: 'La questione' },
     { href: 'comeprocede.html',  label: 'Come procede' },
     { href: 'richieste.html',    label: 'Richieste' },
     { href: 'faq.html',          label: 'FAQ' }
