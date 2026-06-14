@@ -445,3 +445,89 @@ a:hover { color: var(--blue-dark); }
 }
 .breadcrumb a { color: var(--text-sec); }
 .breadcrumb a:hover { color: var(--blue-dark); }
+
+/* ── PILL AGGIORNAMENTO ─────────────────────────────────── */
+.update-pill {
+  text-align: center;
+  padding: .5rem 20px;
+  background: var(--bg-alt);
+  border-bottom: 1px solid var(--border);
+  font-size: .85rem;
+}
+.update-pill a {
+  color: var(--blue-mid);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* ── TIMELINE VERTICALE PROPORZIONALE ───────────────────── */
+.tl-wrap {
+  position: relative;
+  padding-left: 28px;
+  margin: 1.5rem 0;
+}
+.tl-wrap::before {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 8px;
+  bottom: 0;
+  width: 2px;
+  background: var(--border);
+}
+.tl-item {
+  position: relative;
+  padding-bottom: 0;
+}
+.tl-dot {
+  position: absolute;
+  left: -23px;
+  top: 4px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--blue-dark);
+  border: 2px solid var(--bg-page);
+}
+.tl-dot--citizen { background: var(--blue-mid); }
+.tl-date {
+  font-size: .78rem;
+  color: var(--text-sec);
+  margin-bottom: .15rem;
+}
+.tl-title {
+  font-weight: 600;
+  font-size: .95rem;
+  color: var(--text-main);
+  margin-bottom: .2rem;
+}
+.tl-desc {
+  font-size: .875rem;
+  color: var(--text-sec);
+  line-height: 1.5;
+}
+.tl-link {
+  font-size: .85rem;
+  color: var(--blue-mid);
+  display: inline-block;
+  margin-top: .25rem;
+}
+.badge-citizen-action {
+  display: inline-block;
+  font-size: .72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: var(--blue-mid);
+  border: 1px solid var(--blue-mid);
+  border-radius: 3px;
+  padding: .1rem .4rem;
+  margin-bottom: .25rem;
+}
+
+/* ── DOC NOTE ───────────────────────────────────────────── */
+.doc-note {
+  font-size: .85rem;
+  color: var(--text-sec);
+  margin-top: .25rem;
+}
