@@ -1,0 +1,447 @@
+/* ============================================================
+   Torre 5G Moricone — Design system beta
+   Mobile-first, Tailwind-free, CSS puro
+   ============================================================ */
+
+:root {
+  --blue-dark:    #1a3a5c;
+  --blue-mid:     #2563a8;
+  --bg-page:      #faf9f7;
+  --bg-alt:       #f0ede8;
+  --text-main:    #1a1a1a;
+  --text-sec:     #555555;
+  --border:       #e0dbd3;
+  --green-bg:     #dcfce7;
+  --green-text:   #166534;
+  --yellow-bg:    #fef9c3;
+  --yellow-text:  #854d0e;
+  --orange-bg:    #ffedd5;
+  --orange-text:  #9a3412;
+  --red-bg:       #fee2e2;
+  --red-text:     #991b1b;
+  --amber-bg:     #fffbeb;
+  --amber:        #d97706;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-size: 17px; scroll-behavior: smooth; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+               Helvetica, Arial, sans-serif;
+  background: var(--bg-page);
+  color: var(--text-main);
+  line-height: 1.7;
+}
+
+/* Contenitore centrato */
+.container {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ── HEADER ─────────────────────────────────────────────── */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--bg-page);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 1px 4px rgba(0,0,0,.06);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.site-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--blue-dark);
+  text-decoration: none;
+  letter-spacing: -.01em;
+}
+
+/* Nav desktop */
+.site-nav { display: none; gap: 1.5rem; }
+.site-nav a {
+  font-size: .9rem;
+  font-weight: 500;
+  color: var(--text-sec);
+  text-decoration: none;
+}
+.site-nav a:hover,
+.site-nav a.active { color: var(--blue-dark); border-bottom: 2px solid var(--blue-dark); padding-bottom: 2px; }
+
+/* Hamburger */
+.nav-toggle {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: var(--blue-dark);
+  padding: 4px 8px;
+  line-height: 1;
+}
+
+/* Menu mobile */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background: var(--bg-page);
+  border-bottom: 1px solid var(--border);
+  padding: .5rem 20px 1rem;
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu a {
+  padding: .65rem 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-main);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border);
+}
+.mobile-menu a:last-child { border-bottom: none; }
+
+@media (min-width: 640px) {
+  .site-nav { display: flex; }
+  .nav-toggle { display: none; }
+}
+
+/* ── BANNER AGGIORNAMENTO ───────────────────────────────── */
+.update-banner {
+  background: var(--bg-alt);
+  border-left: 4px solid var(--blue-mid);
+  padding: .75rem 20px;
+  font-size: .875rem;
+  color: var(--text-sec);
+}
+.update-banner a { color: var(--blue-mid); font-weight: 500; }
+
+/* ── MAIN ───────────────────────────────────────────────── */
+main { padding: 2rem 0 4rem; }
+
+/* ── TIPOGRAFIA ─────────────────────────────────────────── */
+h1 {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 800;
+  color: var(--blue-dark);
+  line-height: 1.2;
+  margin-bottom: .75rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--blue-dark);
+  margin: 2.5rem 0 1rem;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: .5rem;
+}
+
+p { margin-bottom: 1rem; color: var(--text-main); }
+p:last-child { margin-bottom: 0; }
+
+a { color: var(--blue-mid); }
+a:hover { color: var(--blue-dark); }
+
+.text-sec { color: var(--text-sec); font-size: .9rem; }
+
+/* ── BOX "A CHE PUNTO SIAMO" ────────────────────────────── */
+.status-box {
+  background: var(--bg-alt);
+  border-left: 4px solid var(--blue-dark);
+  padding: 1.25rem 1.5rem;
+  margin: 2rem 0;
+  border-radius: 2px;
+}
+.status-box h2 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--blue-dark);
+  margin: 0 0 .75rem;
+}
+.status-box ul {
+  list-style: none;
+  padding: 0;
+}
+.status-box ul li {
+  padding: .4rem 0;
+  padding-left: 1.25rem;
+  position: relative;
+  font-size: .95rem;
+  border-bottom: 1px solid var(--border);
+}
+.status-box ul li:last-child { border-bottom: none; }
+.status-box ul li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--blue-mid);
+}
+
+/* ── TIMELINE ───────────────────────────────────────────── */
+.timeline { margin: 1.5rem 0; }
+.timeline-item {
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 1.5rem;
+  position: relative;
+}
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 20px;
+  bottom: 0;
+  width: 2px;
+  background: var(--border);
+}
+.timeline-item:last-child::before { display: none; }
+.timeline-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--blue-dark);
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+.timeline-dot.citizen { background: var(--blue-mid); }
+.timeline-content { flex: 1; min-width: 0; }
+.timeline-date {
+  font-size: .8rem;
+  color: var(--text-sec);
+  margin-bottom: .2rem;
+}
+.timeline-title {
+  font-weight: 600;
+  font-size: .95rem;
+  color: var(--text-main);
+  margin-bottom: .25rem;
+}
+.timeline-desc { font-size: .9rem; color: var(--text-sec); }
+.badge-citizen {
+  display: inline-block;
+  font-size: .7rem;
+  font-weight: 600;
+  background: var(--blue-dark);
+  color: white;
+  padding: 1px 6px;
+  border-radius: 3px;
+  margin-bottom: .3rem;
+  text-transform: uppercase;
+  letter-spacing: .03em;
+}
+
+/* ── CARD NAVIGAZIONE ───────────────────────────────────── */
+.card-grid {
+  display: grid;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+@media (min-width: 560px) {
+  .card-grid { grid-template-columns: repeat(3, 1fr); }
+}
+.card {
+  display: block;
+  padding: 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--text-main);
+  transition: border-color .15s, box-shadow .15s;
+}
+.card:hover {
+  border-color: var(--blue-dark);
+  box-shadow: 0 2px 8px rgba(26,58,92,.1);
+}
+.card-title {
+  font-weight: 700;
+  font-size: .95rem;
+  color: var(--blue-dark);
+  margin-bottom: .35rem;
+}
+.card-desc { font-size: .875rem; color: var(--text-sec); margin: 0; }
+.card-arrow { color: var(--blue-mid); float: right; margin-top: -1.3rem; }
+
+/* ── HERO ───────────────────────────────────────────────── */
+.hero { padding: 2rem 0 1.5rem; }
+.hero-intro {
+  font-size: 1rem;
+  color: var(--text-sec);
+  margin-bottom: 1.5rem;
+  max-width: 60ch;
+  border-left: 3px solid var(--blue-mid);
+  padding-left: 1rem;
+}
+
+/* ── ACCORDION (pill) ───────────────────────────────────── */
+.pill {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  margin-bottom: .75rem;
+  overflow: hidden;
+}
+.pill-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  cursor: pointer;
+  background: var(--bg-page);
+  user-select: none;
+}
+.pill-header:hover { background: var(--bg-alt); }
+.pill-header h3 {
+  font-size: .95rem;
+  font-weight: 600;
+  color: var(--blue-dark);
+  margin: 0;
+}
+.pill-arrow {
+  color: var(--text-sec);
+  font-size: 1rem;
+  transition: transform .2s;
+  flex-shrink: 0;
+  margin-left: .5rem;
+}
+.pill.open .pill-arrow { transform: rotate(180deg); }
+.pill-body {
+  display: none;
+  padding: 0 1.25rem 1.25rem;
+  background: var(--bg-alt);
+  border-top: 1px solid var(--border);
+}
+.pill.open .pill-body { display: block; }
+.pill-body p { font-size: .95rem; margin-top: 1rem; }
+
+/* ── SEZIONE DIVIDER ────────────────────────────────────── */
+.section-label {
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text-sec);
+  margin: 2.5rem 0 1rem;
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+}
+.section-label::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* ── BADGE STATO RICHIESTE ──────────────────────────────── */
+.badge {
+  display: inline-block;
+  font-size: .75rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  margin-bottom: .5rem;
+}
+.badge-wait    { background: var(--yellow-bg); color: var(--yellow-text); }
+.badge-partial { background: var(--orange-bg); color: var(--orange-text); }
+.badge-done    { background: var(--green-bg);  color: var(--green-text); }
+.badge-denied  { background: var(--red-bg);    color: var(--red-text); }
+.badge-citizen-action { background: var(--blue-dark); color: white; }
+
+/* ── PULSANTE DOWNLOAD PDF ──────────────────────────────── */
+.btn-pdf {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  background: var(--blue-dark);
+  color: white;
+  padding: .85rem 1.25rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: .95rem;
+  margin: .75rem 0;
+  transition: background .15s;
+}
+.btn-pdf:hover { background: var(--blue-mid); color: white; }
+.btn-pdf-icon { font-size: 1.1rem; }
+
+/* ── BOX NOTA CONTESTO ──────────────────────────────────── */
+.context-note {
+  background: var(--amber-bg);
+  border-left: 4px solid var(--amber);
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  border-radius: 2px;
+  font-size: .9rem;
+  color: var(--text-sec);
+}
+
+/* ── IMMAGINI ───────────────────────────────────────────── */
+.img-full {
+  width: 100%;
+  max-width: 680px;
+  display: block;
+  margin: 1rem auto;
+  height: auto;
+}
+.img-caption {
+  font-size: .8rem;
+  color: var(--text-sec);
+  text-align: center;
+  margin-top: .25rem;
+  margin-bottom: 1rem;
+}
+
+/* ── FOOTER ─────────────────────────────────────────────── */
+.site-footer {
+  background: var(--blue-dark);
+  color: rgba(255,255,255,.75);
+  padding: 2rem 0;
+  font-size: .85rem;
+}
+.site-footer a { color: rgba(255,255,255,.9); }
+.footer-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.footer-social {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  font-weight: 500;
+  font-size: .9rem;
+}
+.footer-legal { color: rgba(255,255,255,.55); margin-top: .75rem; }
+
+/* ── BREADCRUMB ─────────────────────────────────────────── */
+.breadcrumb {
+  font-size: .85rem;
+  color: var(--text-sec);
+  margin-bottom: 1.5rem;
+}
+.breadcrumb a { color: var(--text-sec); }
+.breadcrumb a:hover { color: var(--blue-dark); }

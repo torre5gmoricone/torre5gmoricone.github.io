@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="100%"
+   viewBox="0 0 680 420"
+   version="1.1"
+   xmlns="http://www.w3.org/2000/svg">
+  <style>
+.gnd{fill:#e4ddd0;stroke:#c0b8a8;stroke-width:.5}
+.wall2{fill:#ede8d8;stroke:#a09080;stroke-width:.7}
+.win2{fill:#b8d8f4;stroke:#78a8d8;stroke-width:.4}
+.roof2{fill:#b05828;stroke:#8a3e18;stroke-width:.7}
+.trunk{fill:#7a5228;stroke:#5a3810;stroke-width:.8}
+.br{fill:none;stroke:#5a3810;stroke-width:1.6;stroke-linecap:round}
+.lf{fill:#3a7828;fill-opacity:.88}
+.twr{fill:#bcc2c8;stroke:#8a9298;stroke-width:.7}
+.twr-ring{fill:#9aa0a8;stroke:#6a7078;stroke-width:.6}
+.ant-v{fill:#d4d8dc;stroke:#8a9298;stroke-width:.5}
+.par-dish{fill:#c8cccc;stroke:#8a9298;stroke-width:.8}
+.shelter{fill:#a8b0b8;stroke:#6a7278;stroke-width:.6}
+.person{fill:none;stroke:#4a5568;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+.person-head{fill:#4a5568;stroke:none}
+.arr{stroke:#4a5568;stroke-width:1.2;fill:none}
+.lb{font:11px/1.4 system-ui,sans-serif;fill:#718096}
+.lb-s{font:10.5px/1.4 system-ui,sans-serif;fill:#4a5568}
+.lb-h{font:500 12px/1.4 system-ui,sans-serif;fill:#111820}
+@media(prefers-color-scheme:dark){
+.gnd{fill:#3a3530;stroke:#555}
+.wall2{fill:#312e28;stroke:#5a5040}
+.win2{fill:#1a2a3a;stroke:#4a7a9a}
+.roof2{fill:#7a3818;stroke:#5a2808}
+.trunk{fill:#4a3018;stroke:#2a1808}.br{stroke:#3a2408}.lf{fill:#1a5018}
+.twr{fill:#5a6068;stroke:#4a5058}.twr-ring{fill:#404850;stroke:#303840}
+.ant-v{fill:#606870;stroke:#404850}.par-dish{fill:#505858;stroke:#383e3e}
+.shelter{fill:#3a4248;stroke:#282e34}
+.person{stroke:#9ea8b4}.person-head{fill:#9ea8b4}
+.arr{stroke:#9ea8b4}
+.lb{fill:#9ea8b4}.lb-s{fill:#c8cdd8}.lb-h{fill:#e8e4de}}
+  </style>
+  <defs>
+    <marker id="mh" viewBox="0 0 10 10" refX="8" refY="5"
+            markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" stroke="context-stroke"
+            stroke-width="1.5" stroke-linecap="round" fill="none"/>
+    </marker>
+    <marker id="mh-g" viewBox="0 0 10 10" refX="8" refY="5"
+            markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" stroke="#8a9298"
+            stroke-width="1.5" stroke-linecap="round" fill="none"/>
+    </marker>
+  </defs>
+
+  <!-- GROUND -->
+  <rect class="gnd" x="40" y="330" width="600" height="16"/>
+
+  <!-- PERSONA (scala umana di riferimento) -->
+  <circle class="person-head" cx="110" cy="316" r="3.5"/>
+  <line class="person" x1="110" y1="320" x2="110" y2="325"/>
+  <line class="person" x1="105" y1="322" x2="115" y2="322"/>
+  <line class="person" x1="110" y1="325" x2="106" y2="330"/>
+  <line class="person" x1="110" y1="325" x2="114" y2="330"/>
+
+  <!-- CASA DUE PIANI -->
+  <rect class="wall2" x="230" y="274" width="44" height="56" rx="1"/>
+  <polygon class="roof2" points="227,274 252,258 277,274"/>
+  <!-- camino -->
+  <rect style="fill:#b07850;stroke:#8a5830;stroke-width:.5"
+        x="262" y="252" width="6" height="10" rx="1"/>
+  <!-- finestre -->
+  <rect class="win2" x="236" y="279" width="12" height="10" rx="1"/>
+  <rect class="win2" x="256" y="279" width="12" height="10" rx="1"/>
+  <rect class="win2" x="236" y="299" width="12" height="9" rx="1"/>
+  <rect class="win2" x="256" y="299" width="12" height="9" rx="1"/>
+  <!-- porta -->
+  <rect style="fill:#8c6840;stroke:#6a4e28;stroke-width:.5"
+        x="246" y="312" width="10" height="18" rx="1"/>
+
+  <!-- QUERCIA ADULTA -->
+  <rect class="trunk" x="410" y="276" width="11" height="54" rx="3"/>
+  <path class="br" d="M415,278 Q399,258 387,244"/>
+  <path class="br" d="M415,278 Q431,256 443,242"/>
+  <path class="br" d="M415,272 Q413,252 411,236"/>
+  <path class="br" style="stroke-width:1" d="M387,244 Q379,234 375,226"/>
+  <path class="br" style="stroke-width:1" d="M387,244 Q385,232 390,224"/>
+  <path class="br" style="stroke-width:1" d="M443,242 Q451,232 455,224"/>
+  <path class="br" style="stroke-width:1" d="M443,242 Q445,230 440,222"/>
+  <ellipse class="lf" cx="374" cy="223" rx="13" ry="9"/>
+  <ellipse class="lf" cx="389" cy="218" rx="12" ry="8"/>
+  <ellipse class="lf" cx="410" cy="230" rx="11" ry="8"/>
+  <ellipse class="lf" cx="441" cy="218" rx="11" ry="8"/>
+  <ellipse class="lf" cx="456" cy="220" rx="12" ry="9"/>
+
+  <!-- TORRE INWIT -->
+  <rect class="shelter" x="552" y="312" width="40" height="18" rx="2"/>
+  <rect class="twr-ring" x="555" y="326" width="32" height="5" rx="1"/>
+  <rect style="fill:#606870" x="557" y="326" width="3" height="5"/>
+  <rect style="fill:#606870" x="564" y="326" width="3" height="5"/>
+  <rect style="fill:#606870" x="571" y="326" width="3" height="5"/>
+  <rect style="fill:#606870" x="578" y="326" width="3" height="5"/>
+  <polygon class="twr" points="554,330 586,330 580,90 560,90"/>
+  <line style="stroke:#9aa0a8;stroke-width:.5;fill:none" x1="556" y1="300" x2="584" y2="300"/>
+  <line style="stroke:#9aa0a8;stroke-width:.5;fill:none" x1="557" y1="268" x2="583" y2="268"/>
+  <line style="stroke:#9aa0a8;stroke-width:.5;fill:none" x1="558" y1="236" x2="582" y2="236"/>
+  <line style="stroke:#9aa0a8;stroke-width:.5;fill:none" x1="560" y1="204" x2="580" y2="204"/>
+  <line style="stroke:#9aa0a8;stroke-width:.5;fill:none" x1="561" y1="172" x2="579" y2="172"/>
+  <line style="stroke:#9aa0a8;stroke-width:.5;fill:none" x1="562" y1="142" x2="578" y2="142"/>
+  <line style="stroke:#9aa0a8;stroke-width:.5;fill:none" x1="563" y1="116" x2="577" y2="116"/>
+  <rect class="twr-ring" x="558" y="86" width="24" height="6" rx="1"/>
+  <rect class="twr-ring" x="555" y="74" width="30" height="4" rx="1"/>
+  <rect class="twr-ring" x="568" y="46" width="4" height="30" rx="1"/>
+  <rect class="ant-v" x="556" y="38" width="5" height="38" rx="1"
+        transform="rotate(-10,558,76)"/>
+  <rect class="ant-v" x="563" y="36" width="5" height="38" rx="1"
+        transform="rotate(-4,565,76)"/>
+  <rect class="ant-v" x="574" y="36" width="5" height="38" rx="1"
+        transform="rotate(4,577,76)"/>
+  <rect class="ant-v" x="581" y="38" width="5" height="38" rx="1"
+        transform="rotate(10,584,76)"/>
+  <!-- antenna indicators -->
+  <line style="stroke:#b45309;stroke-width:.8;fill:none"
+        x1="552" y1="48" x2="556" y2="40" marker-end="url(#mh-g)"/>
+  <line style="stroke:#b45309;stroke-width:.8;fill:none"
+        x1="591" y1="48" x2="587" y2="40" marker-end="url(#mh-g)"/>
+  <!-- parabola -->
+  <g transform="translate(600,60)">
+    <ellipse class="par-dish" cx="0" cy="0" rx="11" ry="8"/>
+    <path style="fill:none;stroke:#707880;stroke-width:1.2" d="M-6,-5 Q4,0 -6,5"/>
+    <circle style="fill:#8a9298;stroke:none" cx="-3" cy="0" r="1.8"/>
+    <line style="stroke:#8a9298;stroke-width:1;fill:none" x1="-3" y1="0" x2="9" y2="0"/>
+    <line style="stroke:#8a9298;stroke-width:.8;fill:none" x1="11" y1="-4" x2="16" y2="-8"/>
+    <line style="stroke:#8a9298;stroke-width:.8;fill:none" x1="11" y1="4" x2="16" y2="8"/>
+  </g>
+  <line style="stroke:#8a9298;stroke-width:.7;fill:none" x1="616" y1="52" x2="572" y2="54"/>
+  <line style="stroke:#8a9298;stroke-width:.7;fill:none" x1="616" y1="68" x2="572" y2="66"/>
+  <line style="stroke:#8a9298;stroke-width:.5;stroke-dasharray:2 2;fill:none"
+        x1="562" y1="88" x2="561" y2="98"/>
+  <line style="stroke:#8a9298;stroke-width:.5;stroke-dasharray:2 2;fill:none"
+        x1="578" y1="88" x2="579" y2="98"/>
+
+  <!-- FRECCE QUOTA -->
+  <!-- persona -->
+  <line class="arr" x1="98" y1="330" x2="98" y2="312"
+        marker-start="url(#mh)" marker-end="url(#mh)"/>
+  <!-- casa -->
+  <line class="arr" x1="282" y1="328" x2="282" y2="256"
+        marker-start="url(#mh)" marker-end="url(#mh)"/>
+  <!-- quercia -->
+  <line class="arr" x1="463" y1="332" x2="463" y2="228"
+        marker-start="url(#mh)" marker-end="url(#mh)"/>
+  <!-- torre (principale, con etichetta) -->
+  <line class="arr" x1="636" y1="332" x2="636" y2="92"
+        marker-start="url(#mh)" marker-end="url(#mh)"/>
+  <text class="lb-h" x="644" y="218">30 m</text>
+
+  <!-- ETICHETTE IN BASSO -->
+  <text class="lb-h" x="110" y="358" text-anchor="middle">Persona</text>
+  <text class="lb-s" x="110" y="371" text-anchor="middle">≈ 1,7 m</text>
+
+  <text class="lb-h" x="252" y="358" text-anchor="middle">Casa</text>
+  <text class="lb-s" x="252" y="371" text-anchor="middle">2 piani ≈ 7 m</text>
+
+  <text class="lb-h" x="415" y="358" text-anchor="middle">Quercia adulta</text>
+  <text class="lb-s" x="415" y="371" text-anchor="middle">≈ 13 m</text>
+
+  <text class="lb-h" x="570" y="358" text-anchor="middle">Torre Inwit</text>
+  <text class="lb-s" x="570" y="371" text-anchor="middle">circa 30 m</text>
+</svg>
