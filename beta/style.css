@@ -531,3 +531,21 @@ a:hover { color: var(--blue-dark); }
   color: var(--text-sec);
   margin-top: .25rem;
 }
+
+/* ── RICHIESTE ACCORDION ────────────────────────────────── */
+.req-meta {
+  font-size: .82rem;
+  color: var(--text-sec);
+  margin-top: -.5rem;
+  margin-bottom: .75rem;
+}
+.req-response {
+  margin-top: 1rem;
+  padding: .75rem 1rem;
+  background: var(--bg-alt);
+  border-left: 3px solid var(--border);
+  border-radius: 0 4px 4px 0;
+  font-size: .9rem;
+}
+.req-response p { margin: 0 0 .5rem; }
+.req-response a { margin-top: .25rem; display: inline-block; }
