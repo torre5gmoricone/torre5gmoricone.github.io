@@ -582,3 +582,13 @@ a:hover { color: var(--blue-dark); }
 .req-content details:not([open]) summary::before {
   content: "▸ ";
 }
+
+/* ── FOOTER — override colore testo ────────────────────── */
+.site-footer,
+.site-footer p,
+.site-footer a,
+.footer-inner,
+.footer-inner p,
+.footer-desc {
+  color: #ffffff !important;
+}
