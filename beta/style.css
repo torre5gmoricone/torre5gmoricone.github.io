@@ -37,10 +37,21 @@ body {
 
 /* Contenitore centrato */
 .container {
-  width: 100%;
-  max-width: 720px;
+  max-width: 860px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 24px;
+}
+
+@media (min-width: 900px) {
+  .container {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 0 16px;
+  }
 }
 
 /* ── HEADER ─────────────────────────────────────────────── */
@@ -518,8 +529,8 @@ a:hover { color: var(--blue-dark); }
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: .04em;
-  color: var(--blue-mid);
-  border: 1px solid var(--blue-mid);
+  color: #ffffff;
+  border: 1px solid rgba(255,255,255,.6);
   border-radius: 3px;
   padding: .1rem .4rem;
   margin-bottom: .25rem;
