@@ -164,7 +164,7 @@ h3 {
   margin-bottom: .5rem;
 }
 
-p { margin-bottom: 1rem; color: var(--text-main); }
+p { margin-bottom: 1rem; color: inherit; }
 p:last-child { margin-bottom: 0; }
 
 a { color: var(--blue-mid); }
