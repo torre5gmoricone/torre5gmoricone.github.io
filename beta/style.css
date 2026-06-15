@@ -424,7 +424,7 @@ a:hover { color: var(--blue-dark); }
 /* ── FOOTER ─────────────────────────────────────────────── */
 .site-footer {
   background: var(--blue-dark);
-  color: rgba(255,255,255,.75);
+  color: #ffffff;
   padding: 2rem 0;
   font-size: .85rem;
 }
@@ -560,3 +560,25 @@ a:hover { color: var(--blue-dark); }
 }
 .req-response p { margin: 0 0 .5rem; }
 .req-response a { margin-top: .25rem; display: inline-block; }
+
+/* ── ACCORDION DETAILS/SUMMARY (richieste) ──────────────── */
+.req-content summary {
+  cursor: pointer;
+  text-decoration: underline;
+  color: var(--blue-mid);
+  list-style: none;
+  padding: .5rem 0;
+  font-weight: 600;
+}
+.req-content summary::-webkit-details-marker {
+  display: none;
+}
+.req-content summary:hover {
+  color: var(--blue-dark);
+}
+.req-content details[open] summary::before {
+  content: "▾ ";
+}
+.req-content details:not([open]) summary::before {
+  content: "▸ ";
+}
